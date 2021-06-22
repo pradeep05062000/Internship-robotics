@@ -1,0 +1,64 @@
+.drag-drop__heading{
+    font-size: 3rem;
+    color: $color-grey;
+    font-weight: 500;
+}
+
+.upload{
+
+    &__main-section{
+        margin-top: 10rem;
+    }
+
+    &__heading{
+        &__container{
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        &--paragraph{
+            display: inline-block;
+            align-self: center;
+            width: 50vw;
+            text-align: center;
+        }
+    }
+    
+    &__section{
+        display: grid;
+        justify-content: center;
+        background-color: $color-light-grey;
+        height: 60vh;
+        padding:3rem 0;
+    }
+
+    &__section__inner-block{
+        border: 1px dashed $color-grey;
+        padding: 2rem;
+        border-radius: 1rem;
+    }
+
+    &__instructions{
+        display: block;
+        text-align: center;
+        font-size: 1.4rem;
+    }
+
+    &__browse__btn{
+        background-color: $color-green;
+        border: none;
+        padding: 1rem 2rem;
+        color: $color-white-1;
+        border-radius: 5px;
+        font-size: 1.6rem;
+
+        &--container{
+            display: flex;
+            justify-content: center;
+            margin: 3rem 0;
+        }
+    }
+}
+
