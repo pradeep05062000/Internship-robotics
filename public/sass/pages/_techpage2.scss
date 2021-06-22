@@ -1,0 +1,387 @@
+.page2{
+    &__container{
+        font-size: 1.6rem;
+        margin: 5rem 10rem;   
+        
+        @include respond(tab-port){
+            margin: 5rem;  
+        }
+
+        @include respond(phone){
+            margin: 5rem 10rem; 
+        }
+    }
+}
+
+.upload{
+    &__option{
+        display: none;
+        @include respond(phone){
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+
+    &__phone-btn{
+        color: $color-green;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 2rem;
+        &:active,:link{
+            color: $color-green;
+        }
+        
+    }
+    
+}
+
+.upload{
+    &__files{
+        display: flex;
+        padding: 1rem 0;
+    }
+    &__container{
+        &:not(:last-child){
+            margin-right:2rem;
+        }
+    }
+    
+    &__content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 17rem;
+        border: 1px solid $color-light-grey-1;
+        padding: 2px 5px;
+        font-size: 1.4rem;
+        border-radius: 4px;
+    }
+
+    &__btn{
+        display: flex;
+        align-items: center;
+        border: 1px solid $color-light-grey-1;
+        padding: 2px 5px;
+        border-radius: 4px;
+        color: inherit;
+        @include respond(phone){
+            display: none;
+        }
+    }
+}
+
+.close__upload{
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.file{
+    &__container{
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 1rem;
+        justify-content: space-between;
+        @include respond(phone){
+            display: block;
+        }
+    }
+    
+    &__title{
+        font-size: 1.4rem;
+        margin-right: 1rem;
+        align-self: center;
+    }
+
+    &__name{
+        font-size: 2rem;
+    }
+
+    &__options{
+        display: flex;
+        align-items: flex-end;
+        padding-right: 3rem;
+        font-size: 1.6rem;
+        @include respond(phone){
+            margin: 1rem 0;
+        }
+        &__container{
+            display: flex;
+            align-items: center;
+            margin-right: 1rem;
+        }
+
+        &__content{
+            margin-right: .5rem;
+        }
+    }
+}
+
+
+.square{
+    width: 2.2rem;
+    height: 2.2rem;
+    background-color: $color-light-grey-1;
+}
+
+
+
+//TECH = TECHNOLOGY SECTION
+.tech{
+    &__container{
+        display: grid;
+        grid-template-columns: 17rem 1fr 17rem;
+        grid-auto-flow: column;
+        grid-gap: .5rem;
+        border: 1px solid $color-light-grey;
+        border-radius: 1rem;
+        box-shadow: 2px 3px 6px 3px rgba($color-grey,0.3);
+        overflow: hidden;
+
+        @include respond(phone){
+            grid-auto-flow: row;
+            grid-template-columns: unset;
+        }
+
+        &--left-inner{
+            background-color: $color-light-grey;
+            font-size: 1.4rem;
+            text-transform: lowercase;
+        }
+
+        &--middle{
+            overflow: hidden;
+            padding: 1rem;
+        }
+
+        &--right{
+            padding: 1rem;
+        }
+    }
+}
+
+
+.section__heading__container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.downArrow{
+    display: none;
+    @include respond(phone){
+        display: block;
+    }
+}
+
+//Left side image
+.left-inner{
+    &__lamp{
+        @include respond(phone){
+            display: flex;
+            justify-content: center;
+
+            img{
+                object-fit: contain;
+            }
+        }
+        
+    }
+
+    &__lamp--scale{
+        border-top: 1px solid $color-dark-grey;
+        padding: 1rem;
+    }
+
+    &__lamp--vol{
+        border-top: 1px solid $color-dark-grey;
+        padding: 1rem;
+        color: $color-grey;
+        &:last-child{
+            border-bottom: 1px solid $color-dark-grey;
+        }
+        
+    }
+}
+
+
+
+// MIDDLE 
+//Production details
+.prod__container{
+    margin-top: 2rem;
+    @include respond(phone){
+        padding-bottom: 2rem;
+        border-bottom: 1px solid $color-light-grey-1;
+    }
+
+    &--heading{
+        margin-bottom: 1rem;
+    }
+    &--inputs{
+        display: grid;
+        grid-template-columns: repeat(2,min-content);
+        grid-template-rows: repeat(2,min-content);
+        row-gap: 1rem;
+        column-gap: 2rem;
+
+        @include respond(phone){
+            grid-template-columns: unset;
+            grid-template-rows:unset;
+        }
+    }
+}
+
+.label{
+    font-size: 1.4rem;
+}
+
+.label__question{
+    display: flex;
+    justify-content: space-between;
+}
+
+.question-mark{
+    padding-right: 1rem;
+    color: $color-green;
+}
+
+.material__question-mark{
+    @include respond(phone){
+        display: none;
+    }
+}
+
+.view-sheet{
+    display: none;
+    @include respond(phone){
+        display: inline;
+        padding-right: 1rem;
+        color: $color-green;
+        text-transform: capitalize;
+    }
+}
+
+.select__background{
+    background-color: $color-white-1;
+}
+
+.input{
+    width: 23rem;
+    padding: .5rem;
+    font-size: 1.4rem;
+    border: 1px solid $color-light-grey-1;
+    border-radius: 5px;
+
+    @include respond(phone){
+        width: 100%;
+    }
+}
+
+.input__layer-thickness{
+    grid-row: 2/3;
+    grid-column: 1/2;
+    align-self: stretch ;
+    @include respond(phone){
+        grid-row: unset;
+        grid-column: unset;
+    }
+}
+
+.input__infill{
+    grid-row: 2/3;
+    grid-column: 2/3;
+    @include respond(phone){
+        grid-row: unset;
+        grid-column: unset;
+    }
+}
+
+// POST PRODUCTION 
+.post-prod__container{
+    margin: 2rem 0;
+    @include respond(phone){
+        margin: 0;
+        margin-top: 2rem;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid $color-light-grey-1;
+    }
+    &--inputs{
+        display: grid;
+        grid-template-columns: repeat(2,min-content);
+        grid-template-rows: min-content;
+        column-gap: 2rem;
+
+        @include respond(phone){
+            grid-template-columns: unset;
+        }
+        
+    }
+}
+
+//RIGHT SIDE PRICING
+%quality{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
+    justify-self: stretch;
+}
+
+.priority__select-box{
+    padding: .5rem;
+    font-size: 1.4rem;
+    border: 1px solid $color-light-grey-1;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.quality{
+
+    &__container{
+        margin: 1rem 0;
+    }
+
+    &__content{
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: 1fr 4rem 1fr;
+        align-items: center;
+        max-width: 10rem;
+        border: 1px solid $color-light-grey-1;
+        border-radius: 2px;
+        overflow: hidden;
+    }
+
+    &__dec-inc{
+        @extend %quality;
+        background-color: $color-light-grey-1;
+        font-size: 2rem;
+    }
+
+    &__num{
+        @extend %quality;
+        color: $color-grey;
+    }
+}
+
+.price{
+    font-weight: 500;
+    font-size: 2.2rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid $color-light-grey-1;
+    margin: 1rem 0;
+}
+
+.cost-break-down{
+    margin: 1rem 0;
+    font-size: 1.4rem;
+    color: $color-green;
+}
+
+.instructions{
+    padding: 1rem;
+    background-color: $color-light-grey-2;
+    height: 15rem;
+    margin-right: -1rem;
+}
