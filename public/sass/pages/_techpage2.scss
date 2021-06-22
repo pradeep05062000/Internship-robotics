@@ -310,12 +310,39 @@
         display: grid;
         grid-template-columns: repeat(2,min-content);
         grid-template-rows: min-content;
-        column-gap: 2rem;
 
         @include respond(phone){
             grid-template-columns: unset;
         }
         
+    }
+}
+
+.input__color{
+    width: 90%;
+    @include respond(phone){
+        width: 100%;
+    }
+}
+
+.color{
+    &__container{
+        display: flex;
+        align-items: center;
+        border: 1px solid $color-light-grey-1;
+        border-radius: 5px;
+        padding: 0 .5rem;
+    }
+
+    &__selected{
+        height: 2rem;
+        width: 2rem;
+        background-color: red;
+        padding: 1rem;
+    }
+
+    &__select{
+        border: none;
     }
 }
 

@@ -9,6 +9,7 @@ class TechPage2 extends React.Component {
     technologySlideRef = createRef();
     prodSlideRef = createRef();
     postProdSlideRef = createRef();
+    selectedColorRef = createRef();
     state = {isOverflowing:null}
 
     slideLeft = () => {
@@ -35,6 +36,7 @@ class TechPage2 extends React.Component {
         this.sliderRef.current.scrollLeft = this.leftScroll;
     }
 
+    //this function is only for mobile view
     slideUpDown = (elemRef) => {
             const elem = elemRef.current
             elem.style.transition = "all 2s ease-in-out";
@@ -46,6 +48,12 @@ class TechPage2 extends React.Component {
             
             elem.style.display = "none";
           
+    }
+
+    selectColor = (e) => {
+        const color = this.selectedColorRef.current
+        const colorName = e.target.value
+        color.style.backgroundColor = colorName
     }
 
     componentDidMount() {
@@ -280,6 +288,7 @@ class TechPage2 extends React.Component {
                                             </span>
                                         </span>
                                     </label>
+                                    
                                     <select name="layerThickness" className="input select__background">
                                         <option value="low">Low Quality</option>
                                         <option value="medium">Medium Quality</option>
@@ -316,11 +325,17 @@ class TechPage2 extends React.Component {
                             <div ref={this.postProdSlideRef} className="post-prod__container--inputs">
                                 <div className="input__color">
                                     <label htmlFor="color" className="label">Color</label>
-                                    <select name="color" className="input select__background">
-                                        <option value="red">Red</option>
-                                        <option value="yellow">Yellow</option>
-                                        <option value="green">Green</option>
-                                    </select>
+                                    <div className="color__container">
+                                        <div ref={this.selectedColorRef} className="color__selected">
+                                            &nbsp;
+                                        </div>
+                                        <select name="color" onChange={(e) => this.selectColor(e)} className="input select__background color__select">
+                                            <option value="red">Red</option>
+                                            <option value="yellow">Yellow</option>
+                                            <option value="green">Green</option>
+                                        </select>
+                                    </div>
+                                    
                                 </div>
                                 <div className="input__finish">
                                     <label htmlFor="finish" className="label">Finish</label>

@@ -17,7 +17,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "watch:sass": "node-sass public/sass/main.scss public/css/style.css -w"
+    "watch:sass": "node-sass public/sass/main.scss public/css/style.css -w",
+    "compile:sass": "node-sass public/sass/main.scss public/css/style.comp.css",
+    "prefix:sass": "postcss public/css/style.comp.css --use autoprefixer -b 'last 5 versions' -o public/css/style.prefix.css",
+    "compress:css": "node-sass public/css/style.prefix.css public/css/style.css --output-style compressed"
   },
   "eslintConfig": {
     "extends": [
@@ -38,6 +41,9 @@
     ]
   },
   "devDependencies": {
-    "node-sass": "^6.0.0"
+    "autoprefixer": "^10.2.6",
+    "concat": "^1.0.3",
+    "node-sass": "^6.0.0",
+    "postcss": "^8.3.5"
   }
 }

@@ -14,8 +14,8 @@ class App extends React.Component{
             <div>
                 <Router history={history}>
                     <Switch>
-                        <Route exact path='/upload'  component={TechPage2}  />
-                        <Route exact path='/' component={UploadPage1} />
+                        <Route exact path='/'  component={TechPage2}  />
+                        <Route exact path='/upload' component={UploadPage1} />
                     </Switch>
                 </Router>
             </div>
