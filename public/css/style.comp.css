@@ -139,9 +139,6 @@ body {
   @media only screen and (max-width: 56.25em) {
     .page2__container {
       margin: 5rem; } }
-  @media only screen and (max-width: 37.5em) {
-    .page2__container {
-      margin: 5rem 10rem; } }
 
 .upload__option {
   display: none; }
@@ -452,6 +449,9 @@ body {
 
 .upload__main-section {
   margin-top: 10rem; }
+
+.upload__title {
+  text-align: center; }
 
 .upload__heading__container {
   display: flex;
